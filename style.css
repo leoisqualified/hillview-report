@@ -1,63 +1,214 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
 }
-.report-container {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    border: 1px solid black;
-    padding: 20px;
-}
+
 h2, h3 {
     text-align: center;
+    color: #333;
 }
-table {
+
+p {
+    margin: 5px 0;
+}
+
+.report-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* First Section Styles */
+.first-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.first-container p {
+    font-size: 14px;
+    color: #666;
+}
+
+.first-container img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+}
+
+.first-container h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Styles for the second section (Student Details) */
+.second-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    gap: 15px; /* Space between the rows and columns */
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-row label {
+    flex: 0 0 40%; /* Label takes 40% of the width */
+    font-size: 14px;
+    color: #333;
+}
+
+.form-row input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Ensures input fills available space */
+}
+
+/* Responsive Design: For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .second-section {
+        grid-template-columns: 1fr; /* Stack the columns vertically on small screens */
+    }
+}
+
+
+/* Third Section (Table for Assessment Area) */
+.third-section table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
+
+.third-section th, .third-section td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+.third-section th {
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.third-section td {
+    vertical-align: top;
+}
+
+/* Footer Section (Promoted) */
+div p {
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="radio"] {
+    margin-left: 10px;
+}
+
+label {
+    margin-left: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
 th, td {
-    border: 1px solid black;
+    border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
 }
+
 th {
-    background-color: #f0f0f0;
+    background-color: #f2f2f2;
 }
-.remarks-section {
-    margin-top: 20px;
+
+td {
+    text-align: center;
 }
-.remarks-section div {
-    margin-bottom: 10px;
+
+input[type="radio"] {
+    transform: scale(1.2); /* Makes the radio button a bit bigger */
 }
-.signature-section {
-    margin-top: 40px;
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .second-section p {
+        width: 100%;
+    }
+
+    .report-container {
+        padding: 15px;
+    }
+
+    .third-section table {
+        font-size: 12px;
+    }
+}
+
+.footer-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+    margin-top: 30px;
+}
+
+.left-column p,
+.right-column p {
+    margin-bottom: 15px;
+}
+
+.left-column,
+.right-column {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
-.signature-section div {
-    width: 45%;
-    text-align: center;
-}
-.footer {
-    text-align: center;
+
+.signature-container {
+    grid-column: span 2; /* Make the signature row span both columns */
+    display: flex;
+    justify-content: space-between; /* Align signatures side by side */
     margin-top: 20px;
-    font-size: 12px;
 }
-.input-field {
-    width: 100%;
+
+.signature-container span {
+    display: flex;
+    align-items: center;
+}
+
+.signature-container p {
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    margin-left: 10px;
+}
+
+input[type="text"] {
+    margin-left: 10px;
     padding: 5px;
+    width: 60%; /* Set a fixed width for the input */
 }
-.btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-}
-.btn:hover {
-    background-color: #45a049;
+
+/*key section */
+.key-section {
+    margin-top: 30px;
 }

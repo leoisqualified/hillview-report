@@ -3,128 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>School Report</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>HillView Report Card</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
     <div class="report-container">
-        <h2>Hillview Montessori School</h2>
-        <h3>Progress Report</h3>
-
-        <!-- User Input Section -->
-        <div id="input-section">
-            <table>
-                <tr>
-                    <td>Name: <input type="text" id="student-name" class="input-field" placeholder="Enter Student Name" /></td>
-                    <td>Age: <input type="text" id="student-age" class="input-field" placeholder="Enter Age" /></td>
-                </tr>
-                <tr>
-                    <td>Class: <input type="text" id="student-class" class="input-field" placeholder="Enter Class" /></td>
-                    <td>Average Age: <input type="text" id="average-age" class="input-field" placeholder="Enter Average Age" /></td>
-                </tr>
-                <tr>
-                    <td>Attendance: <input type="text" id="attendance" class="input-field" placeholder="Enter Attendance" /></td>
-                    <td>Next Term Begins: <input type="text" id="term-begin" class="input-field" placeholder="Enter Term Begin Date" /></td>
-                </tr>
-            </table>
-
-            <h3>Assessment Areas</h3>
-            <table>
-                <tr>
-                    <th>Description / Assessment Area</th>
-                    <th>V (Very Good)</th>
-                    <th>G (Good)</th>
-                    <th>N (Needs Improvement)</th>
-                </tr>
-                <tr>
-                    <td>Wears Clean Clothes</td>
-                    <td><input type="radio" name="clean-clothes" value="V"></td>
-                    <td><input type="radio" name="clean-clothes" value="G"></td>
-                    <td><input type="radio" name="clean-clothes" value="N"></td>
-                </tr>
-                <tr>
-                    <td>Eats Tidy</td>
-                    <td><input type="radio" name="eats-tidy" value="V"></td>
-                    <td><input type="radio" name="eats-tidy" value="G"></td>
-                    <td><input type="radio" name="eats-tidy" value="N"></td>
-                </tr>
-                <!-- Add more rows as needed -->
-            </table>
-
-            <div class="remarks-section">
-                <div>
-                    <label>Class Teacher's Remarks: </label><br>
-                    <textarea id="class-remarks" class="input-field" placeholder="Enter Class Teacher's Remarks"></textarea>
-                </div>
-                <div>
-                    <label>Head Teacher's Remarks: </label><br>
-                    <textarea id="head-remarks" class="input-field" placeholder="Enter Head Teacher's Remarks"></textarea>
-                </div>
+        <h2>HillView Montessori School</h2>
+        <div class="first-container">
+            <p>P.O BOX BC 290 Burma Camp, Accra</p>
+            <p>024 436 4717</p>
+            <img src="" class="school-motto" />
+            <p>Progress Report</p>
+        </div>
+          
+        <!-- Student Name Section -->
+        <div class="second-section">
+            <div class="form-row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" />
             </div>
-
-            <button class="btn" onclick="generateReport()">Generate Report</button>
+            <div class="form-row">
+                <label for="class">Class:</label>
+                <input type="text" id="class" />
+            </div>
+            <div class="form-row">
+                <label for="attendance">Attendance:</label>
+                <input type="number" id="attendance" />
+            </div>
+            <div class="form-row">
+                <label for="age">Age:</label>
+                <input type="number" id="age" />
+            </div>
+            <div class="form-row">
+                <label for="roll">No. on Roll:</label>
+                <input type="number" id="roll" />
+            </div>
+            <div class="form-row">
+                <label for="average-age">Average Age:</label>
+                <input type="number" id="average-age" />
+            </div>
+            <div class="form-row">
+                <label for="year">Year:</label>
+                <input type="number" id="year" />
+            </div>
+            <div class="form-row">
+                <label for="next-term">Next Term Begins:</label>
+                <input type="date" id="next-term" />
+            </div>
         </div>
 
-        <!-- Display Generated Report -->
-        <div id="output-section" style="display:none;">
-            <table>
-                <tr>
-                    <td>Name: <strong id="display-name"></strong></td>
-                    <td>Age: <strong id="display-age"></strong></td>
-                </tr>
-                <tr>
-                    <td>Class: <strong id="display-class"></strong></td>
-                    <td>Average Age: <strong id="display-average-age"></strong></td>
-                </tr>
-                <tr>
-                    <td>Attendance: <strong id="display-attendance"></strong></td>
-                    <td>Next Term Begins: <strong id="display-term-begin"></strong></td>
-                </tr>
-            </table>
-
-            <h3>Assessment Areas</h3>
-            <table>
-                <tr>
-                    <th>Description / Assessment Area</th>
-                    <th>Result</th>
-                </tr>
-                <tr>
-                    <td>Wears Clean Clothes</td>
-                    <td id="result-clean-clothes"></td>
-                </tr>
-                <tr>
-                    <td>Eats Tidy</td>
-                    <td id="result-eats-tidy"></td>
-                </tr>
-                <!-- Add more rows as needed -->
-            </table>
-
-            <div class="remarks-section">
-                <div>
-                    <strong>Class Teacher's Remarks: </strong> <span id="display-class-remarks"></span>
-                </div>
-                <div>
-                    <strong>Head Teacher's Remarks: </strong> <span id="display-head-remarks"></span>
-                </div>
+        <!-- Assessment Area -->
+<div class="third-section">
+    <table>
+        <tr>
+            <th colspan="2">Description / Assessment Area</th>
+            <th>V</th>
+            <th>G</th>
+            <th>N</th>
+        </tr>
+        <tr>
+            <td>Health</td>
+            <td>Wears Clean Clothes</td>
+            <td><input type="radio" name="health1" value="V"></td>
+            <td><input type="radio" name="health1" value="G"></td>
+            <td><input type="radio" name="health1" value="N"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Good Control of Bladder</td>
+            <td><input type="radio" name="health2" value="V"></td>
+            <td><input type="radio" name="health2" value="G"></td>
+            <td><input type="radio" name="health2" value="N"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Eats Tidily</td>
+            <td><input type="radio" name="health3" value="V"></td>
+            <td><input type="radio" name="health3" value="G"></td>
+            <td><input type="radio" name="health3" value="N"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Attends Toilet at acceptable places and times</td>
+            <td><input type="radio" name="health4" value="V"></td>
+            <td><input type="radio" name="health4" value="G"></td>
+            <td><input type="radio" name="health4" value="N"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Washes and Cleans hands after toilet, meals & play</td>
+            <td><input type="radio" name="health5" value="V"></td>
+            <td><input type="radio" name="health5" value="G"></td>
+            <td><input type="radio" name="health5" value="N"></td>
+        </tr>
+        <!-- Emotional & Social Dev't section -->
+        <tr>
+            <td>Emotional & Social Dev't</td>
+            <td>Mix with others and show cooperation?</td>
+            <td><input type="radio" name="emotional1" value="V"></td>
+            <td><input type="radio" name="emotional1" value="G"></td>
+            <td><input type="radio" name="emotional1" value="N"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Show aggression?</td>
+            <td><input type="radio" name="emotional2" value="V"></td>
+            <td><input type="radio" name="emotional2" value="G"></td>
+            <td><input type="radio" name="emotional2" value="N"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Take responsibility and indicate self-discipline?</td>
+            <td><input type="radio" name="emotional3" value="V"></td>
+            <td><input type="radio" name="emotional3" value="G"></td>
+            <td><input type="radio" name="emotional3" value="N"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Show confidence during different situations?</td>
+            <td><input type="radio" name="emotional4" value="V"></td>
+            <td><input type="radio" name="emotional4" value="G"></td>
+            <td><input type="radio" name="emotional4" value="N"></td>
+        </tr>
+        <tr>
+            <td>Congnitive & Language Dev't</td>
+            <td>Follows activity to conclusion</td>
+            <td><input type="radio" name="emotional5" value="V"></td>
+            <td><input type="radio" name="emotional5" value="G"></td>
+            <td><input type="radio" name="emotional5" value="N"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Can recite rhymes and recall story</td>
+            <td><input type="radio" name="emotional6" value="V"></td>
+            <td><input type="radio" name="emotional6" value="G"></td>
+            <td><input type="radio" name="emotional6" value="N"></td>
+        </tr>
+    </table>
+</div>
+        <!--footer section-->
+        <div class="footer-section">
+            <p>Promoted
+                <input type="radio" id="yes-promoted">
+                <label for="yes-promoted">Yes</label>
+                <input type="radio" id="no-promoted">
+                <label for="no-promoted">No</label>
+            </p>
+            <div class="left-column">
+                <p>Conduct <input type="text"></p>
+                <p>Interest <input type="text"></p>
             </div>
-
-            <div class="signature-section">
-                <div>
-                    <span>________________________</span><br>
-                    Class Teacher's Signature
-                </div>
-                <div>
-                    <span>________________________</span><br>
-                    Head Teacher's Signature
-                </div>
+        
+            <div class="right-column">
+                <p>Class Teacher's Remarks <input type="text"></p>
+                <p>Head Teacher's Remarks <input type="text"></p>
             </div>
-
-            <div class="footer">
-                External Automation by Montessori Solutions (MA-006001)
+        
+            <div class="signature-container">
+                <span><p>Class Teacher's Signature:</p>__________________</span>
+                <span><p>Head Teacher's Signature:</p>__________________</span>
             </div>
+        </div> 
+        
+        <!--Key Section-->
+        <div class="key-section">
+            <p>Key V: Very Good G: Good N: Needs Improvement</p>
         </div>
     </div>
-    <script src="./index.js"></script>
 </body>
 </html>
