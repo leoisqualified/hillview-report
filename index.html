@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>School Report</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="report-container">
+        <h2>Hillview Montessori School</h2>
+        <h3>Progress Report</h3>
+
+        <!-- User Input Section -->
+        <div id="input-section">
+            <table>
+                <tr>
+                    <td>Name: <input type="text" id="student-name" class="input-field" placeholder="Enter Student Name" /></td>
+                    <td>Age: <input type="text" id="student-age" class="input-field" placeholder="Enter Age" /></td>
+                </tr>
+                <tr>
+                    <td>Class: <input type="text" id="student-class" class="input-field" placeholder="Enter Class" /></td>
+                    <td>Average Age: <input type="text" id="average-age" class="input-field" placeholder="Enter Average Age" /></td>
+                </tr>
+                <tr>
+                    <td>Attendance: <input type="text" id="attendance" class="input-field" placeholder="Enter Attendance" /></td>
+                    <td>Next Term Begins: <input type="text" id="term-begin" class="input-field" placeholder="Enter Term Begin Date" /></td>
+                </tr>
+            </table>
+
+            <h3>Assessment Areas</h3>
+            <table>
+                <tr>
+                    <th>Description / Assessment Area</th>
+                    <th>V (Very Good)</th>
+                    <th>G (Good)</th>
+                    <th>N (Needs Improvement)</th>
+                </tr>
+                <tr>
+                    <td>Wears Clean Clothes</td>
+                    <td><input type="radio" name="clean-clothes" value="V"></td>
+                    <td><input type="radio" name="clean-clothes" value="G"></td>
+                    <td><input type="radio" name="clean-clothes" value="N"></td>
+                </tr>
+                <tr>
+                    <td>Eats Tidy</td>
+                    <td><input type="radio" name="eats-tidy" value="V"></td>
+                    <td><input type="radio" name="eats-tidy" value="G"></td>
+                    <td><input type="radio" name="eats-tidy" value="N"></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
+
+            <div class="remarks-section">
+                <div>
+                    <label>Class Teacher's Remarks: </label><br>
+                    <textarea id="class-remarks" class="input-field" placeholder="Enter Class Teacher's Remarks"></textarea>
+                </div>
+                <div>
+                    <label>Head Teacher's Remarks: </label><br>
+                    <textarea id="head-remarks" class="input-field" placeholder="Enter Head Teacher's Remarks"></textarea>
+                </div>
+            </div>
+
+            <button class="btn" onclick="generateReport()">Generate Report</button>
+        </div>
+
+        <!-- Display Generated Report -->
+        <div id="output-section" style="display:none;">
+            <table>
+                <tr>
+                    <td>Name: <strong id="display-name"></strong></td>
+                    <td>Age: <strong id="display-age"></strong></td>
+                </tr>
+                <tr>
+                    <td>Class: <strong id="display-class"></strong></td>
+                    <td>Average Age: <strong id="display-average-age"></strong></td>
+                </tr>
+                <tr>
+                    <td>Attendance: <strong id="display-attendance"></strong></td>
+                    <td>Next Term Begins: <strong id="display-term-begin"></strong></td>
+                </tr>
+            </table>
+
+            <h3>Assessment Areas</h3>
+            <table>
+                <tr>
+                    <th>Description / Assessment Area</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td>Wears Clean Clothes</td>
+                    <td id="result-clean-clothes"></td>
+                </tr>
+                <tr>
+                    <td>Eats Tidy</td>
+                    <td id="result-eats-tidy"></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </table>
+
+            <div class="remarks-section">
+                <div>
+                    <strong>Class Teacher's Remarks: </strong> <span id="display-class-remarks"></span>
+                </div>
+                <div>
+                    <strong>Head Teacher's Remarks: </strong> <span id="display-head-remarks"></span>
+                </div>
+            </div>
+
+            <div class="signature-section">
+                <div>
+                    <span>________________________</span><br>
+                    Class Teacher's Signature
+                </div>
+                <div>
+                    <span>________________________</span><br>
+                    Head Teacher's Signature
+                </div>
+            </div>
+
+            <div class="footer">
+                External Automation by Montessori Solutions (MA-006001)
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
