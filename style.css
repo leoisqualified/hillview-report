@@ -4,6 +4,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 h2, h3 {
@@ -164,26 +165,26 @@ input[type="radio"] {
     }
 }
 
+/* footer section */
 .footer-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Space between columns */
     margin-top: 30px;
 }
 
-.left-column p,
-.right-column p {
+.row {
+    display: flex;
+    justify-content: space-between; /* Ensures both columns are aligned in the same row */
+}
+
+.left-column, .right-column {
+    flex: 1; /* Each column takes equal space */
+    padding: 10px;
+}
+
+.left-column p, .right-column p {
     margin-bottom: 15px;
 }
 
-.left-column,
-.right-column {
-    display: flex;
-    flex-direction: column;
-}
-
 .signature-container {
-    grid-column: span 2; /* Make the signature row span both columns */
     display: flex;
     justify-content: space-between; /* Align signatures side by side */
     margin-top: 20px;
@@ -208,7 +209,23 @@ input[type="text"] {
     width: 60%; /* Set a fixed width for the input */
 }
 
+
 /*key section */
 .key-section {
     margin-top: 30px;
 }
+
+/* generate button */
+.generate-button {
+    margin-left: 50%;
+    margin-right: 50%;
+    align-items: center;
+    background-color: green;
+    color: #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100px;
+}
+

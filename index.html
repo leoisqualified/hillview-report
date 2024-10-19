@@ -248,31 +248,45 @@
         <!--footer section-->
         <div class="footer-section">
             <p>Promoted
-                <input type="radio" id="yes-promoted">
+                <input type="radio" name="promoted" id="yes-promoted">
                 <label for="yes-promoted">Yes</label>
-                <input type="radio" id="no-promoted">
+                <input type="radio" name="promoted" id="no-promoted">
                 <label for="no-promoted">No</label>
             </p>
-            <div class="left-column">
-                <p>Conduct <input type="text"></p>
-                <p>Interest <input type="text"></p>
+        
+            <!-- Left and Right Columns -->
+            <div class="row">
+                <div class="left-column">
+                    <p>Conduct <input type="text"></p>
+                    <p>Interest <input type="text"></p>
+                </div>
+        
+                <div class="right-column">
+                    <p>Class Teacher's Remarks <input type="text"></p>
+                    <p>Head Teacher's Remarks <input type="text"></p>
+                </div>
             </div>
         
-            <div class="right-column">
-                <p>Class Teacher's Remarks <input type="text"></p>
-                <p>Head Teacher's Remarks <input type="text"></p>
-            </div>
-        
+            <!-- Signature Section -->
             <div class="signature-container">
                 <span><p>Class Teacher's Signature:</p>__________________</span>
                 <span><p>Head Teacher's Signature:</p>__________________</span>
             </div>
-        </div> 
+        </div>
+         
         
         <!--Key Section-->
         <div class="key-section">
             <p>Key V: Very Good G: Good N: Needs Improvement</p>
         </div>
     </div>
+
+    <!--Generate Button-->
+    <button class="generate-button" onclick="generateReport()">Generate Report</button>
 </body>
+
+    <!--Generated Report-->
+    <div id="output-section">
+        
+    </div>
 </html>
