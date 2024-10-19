@@ -229,3 +229,79 @@ input[type="text"] {
     width: 100px;
 }
 
+/* code for responsiveness */
+/* Container max width to limit content on large screens */
+.report-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Flexbox for rows */
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+}
+
+/* Set equal width for columns */
+.left-column, .right-column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+
+    .left-column, .right-column {
+        width: 100%; /* Ensure full width for smaller screens */
+    }
+}
+
+/* Style for table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.signature-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Key Section */
+.key-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 14px; /* Smaller font for mobile */
+        padding: 6px;
+    }
+}
+
+/* Generate Button */
+.generate-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
