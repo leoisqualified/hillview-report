@@ -195,13 +195,6 @@
             <td><input type="radio" name="emotional14" value="N"></td>
         </tr>
         <tr>
-            <td></td>
-            <td>Shows good physical coordination</td>
-            <td><input type="radio" name="emotional14" value="V"></td>
-            <td><input type="radio" name="emotional14" value="G"></td>
-            <td><input type="radio" name="emotional14" value="N"></td>
-        </tr>
-        <tr>
             <td>Emotional & Social Dev't</td>
             <td>Remains cheerful</td>
             <td><input type="radio" name="emotional15" value="V"></td>
@@ -248,9 +241,9 @@
         <!--footer section-->
         <div class="footer-section">
             <p>Promoted
-                <input type="radio" name="promoted" id="yes-promoted">
+                <input type="radio" name="promoted" id="yes-promoted" value="Yes">
                 <label for="yes-promoted">Yes</label>
-                <input type="radio" name="promoted" id="no-promoted">
+                <input type="radio" name="promoted" id="no-promoted" value="No">
                 <label for="no-promoted">No</label>
             </p>
         
@@ -282,7 +275,7 @@
     </div>
 
     <!--Generate Button-->
-    <button class="generate-button" onclick="generateReport()">Generate Report</button>
+    <button id="generate-button" class="generate-button" onclick="generateReport()">Generate Report</button>
 
     <!--Generated Report-->
     <div id="output-section" style="display: none;">
@@ -298,35 +291,35 @@
         <div class="second-section">
             <div class="form-row">
                 <label for="name">Name:</label>
-                <input type="text" id="name" />
+                <strong><span id="output-name"></span></strong>
             </div>
             <div class="form-row">
                 <label for="class">Class:</label>
-                <input type="text" id="class" />
+                <strong><span id="output-class"></span></strong>
             </div>
             <div class="form-row">
                 <label for="attendance">Attendance:</label>
-                <input type="number" id="attendance" />
+                <strong><span id="output-attendance"></span></strong> 
             </div>
             <div class="form-row">
                 <label for="age">Age:</label>
-                <input type="number" id="age" />
+                <strong><span id="output-age"></span></strong>
             </div>
             <div class="form-row">
                 <label for="roll">No. on Roll:</label>
-                <input type="number" id="roll" />
+                <strong><span id="output-roll"></span></strong>
             </div>
             <div class="form-row">
                 <label for="average-age">Average Age:</label>
-                <input type="number" id="average-age" />
+                <strong><span id="output-averageAge"></span></strong>
             </div>
             <div class="form-row">
                 <label for="year">Year:</label>
-                <input type="number" id="year" />
+                <span id="output-year"></span>
             </div>
             <div class="form-row">
                 <label for="next-term">Next Term Begins:</label>
-                <input type="date" id="next-term" />
+                <span id="output-nextTerm"></span>
             </div>
         </div>
 
@@ -527,10 +520,7 @@
         <!--Footer Section-->
         <div class="footer-section">
             <p>Promoted
-                <input type="radio" name="promoted" id="yes-promoted">
-                <label for="yes-promoted">Yes</label>
-                <input type="radio" name="promoted" id="no-promoted">
-                <label for="no-promoted">No</label>
+                <span id="output-promoted"></span>
             </p>
         
             <!-- Left and Right Columns -->
@@ -552,5 +542,6 @@
                 <span><p><strong>Head Teacher's Signature:</strong></p>__________________</span>
             </div>
         </div>
+    <script src="./index.js"></script>
 </body>
 </html>
