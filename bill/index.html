@@ -4,18 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bill Generator</title>
+    <link href="./style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="output-section">
+    <!--form section-->
+    <form class="form-section">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" class="name"/>
+            <label for="title">Title:</label>
+            <input type="text" class="title">
+        </div>
+        <div>
+            <label for="employeeid">EmployeeID:</label>
+            <input type="text" class="employeeid">
+            <label for="employeeid">Department:</label>
+            <input type="text" class="employeeid">
+        </div>
+    </form>
+
+    <!--table section-->
+    <div class="output-section" style="display: none;">
        <table>
-        <tr colspan="4">
-            <th><p id="date"></p></th>            
+        <tr>
+            <th colspan="4"><p id="date">Date</p></th>            
         </tr>
         <tr>
-            <td colspan="2"></td>
+            <td colspan="2" class="table-gap"></td>
+            <td colspan="2" class="table-gap"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Name:<span id="output-name"></span></td>
+            <td colspan="2">Title:<span id="output-title"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2">Employee ID:<span id="output-employeeid"></span></td>
+            <td colspan="2">Department:<span id="output-department"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="table-gap"></td>
+            <td colspan="2" class="table-gap"></td>
+        </tr>
+        <tr>
+            <td colspan="1"><strong>Description</strong></td>
+            <td colspan="1"><strong>Earnings</strong></td>
+            <td colspan="1">Deductions</td>
+            <td colspan="1">Amount</td>
+        </tr>
+        <tr>
+            <td colspan="1">Basic Salary</td>
+            <td colspan="1"><span id="output-salary"></span></td>
+            <td colspan="1">Income Tax</td>
+            <td colspan="1"><span id="output-tax"></span></td>
+        </tr>
+        <tr>
+            <td colspan="1">Transport Allowance</td>
+            <td colspan="1"><span id="output-transport"></span></td>
+            <td colspan="1">Social Security</td>
+            <td colspan="1"><span id="output-social"></span></td>
+        </tr>
+        <tr>
+            <td colspan="1">Clothes Allowance</td>
+            <td colspan="1"><span id="output-clothes"></span></td>
+            <td colspan="1">Provident Fund</td>
+            <td colspan="1"><span id="output-fund"></span></td>
+        </tr>
+        <tr>
+            <td colspan="1">Retirement Allowance</td>
+            <td colspan="1"><span id="output-retirement"></span></td>
+            <td colspan="1">Welfare</td>
+            <td colspan="1"><span id="output-welfare"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="table-gap"></td>
+            <td colspan="2" class="table-gap"></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="table-gap"></td>
+            <td colspan="2" class="table-gap"></td>
+        </tr>
+        <tr>
+            <td colspan="2">TOTAL<span id="total"></span></td>
+            <td colspan="2">Total Deductions<span id="total-deductions"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="table-gap"></td>
+            <td colspan="2" class="table-gap"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Payment Date:<span id="payment-date"></span></td>
+            <td colspan="2">NET SALARY:<span id="net-salary"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2">Bank Name:<span id="bank-name"></span></td>
             <td colspan="2"></td>
         </tr>
-
+        <tr>
+            <td colspan="2">Bank Account Name:<span id="bankaccount-name"></span></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Account Number:<span id="account-number"></span></td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">SSNIT Number:<span id="ssnit-number"></span></td>
+            <td colspan="2"></td>
+        </tr>
        </table> 
     </div>
 </body>
