@@ -305,3 +305,19 @@ th {
     font-size: 16px;
     cursor: pointer;
 }
+
+/* generated report style */
+#output-name  {
+    position: relative;
+    left: -470px;
+}
+
+#output-attendance, #output-roll, #output-year {
+    position: relative;
+    left: -530px;
+}
+
+ {
+    position: relative;
+    left: -530px;
+}
