@@ -7,7 +7,6 @@ html, body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-items: center;
     text-align: center;
-    
 }
 
 .table-section {
@@ -21,8 +20,30 @@ html, body {
 
 .header {
     font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 30px;
 }
 
-.first-column .row {
-    /*display: ;*/
+.column1-header {
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+
+.column2-header {
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.row {
+    margin-bottom: 90px;
+}
+
+.column1-row {
+    margin-bottom: 230px;
+}
+
+img {
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 100px;
 }
